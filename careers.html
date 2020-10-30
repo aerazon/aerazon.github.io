@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="msapplication-TileColor" content="#0E0E0E" />
+  <meta name="theme-color" content="#0E0E0E" />
+  <meta name="description" content="Index page" />
+  <meta name="keywords" content="index, page" />
+  <meta name="author" content="" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABNVBMVEUetZYdtJUbtJQbtJUdtZYcs5Qwu5+C18aT3c+T3c6U3c9/18Unt5octJUjtZik4tb////a9O8vuJ0cspR81MP4/fza8+4vtpsbsZMaspNWx7Hp+fYvtZobspQ5vaPQ8err+Pbm9/TZ8+4mtpmt5dr5/f15zLyo39QdspSF2Mf7/v2t4dcipYun3tNeyrXu+vjY8u08s5sYo4eo4NU/v6XW8+30/PpnxrMYpYkbqY2o4dYqt5u26N6a2s4ep4wbq44crI8gtJaS3M39//7K7eYxr5YaqY0cr5IcrZGo4tYuuJyF1cWT18qS1siS1ciR1shLuqQZp4scsZMcrpFlyLSU18qT1sl+0cEmsZUaqIwYoYUYoIUYoocap4sds5QYoYYZpoocrZAcsJMcq48cq44dsZMds5X9+DP2AAAA5UlEQVQ4y2NgGAXkAEYmKGBmwSrPysbOwQkCXNw8jFjkefn4BaBAUEgYi/nCIqIwBWLiEpgKJKWkBeAKZDAVyMrJg6QUFEGkEqYCVmUVkIyqmjp2BYwamlogGW0dXewKJPX0QRIGhkbGWBVImpiCxM3MLSytsClgtbYBO97Wzt4BmwJGRydnkLCLq5u7hycWb7J6efv4+vn5BwS6BwWHhPr5hYVHBCEr0AiONIqKjoqJ9dCIc4+MiY6OT0jUQFYQl5SYnJKS4hCcysiYGgxkJicmpaG4IU4DDOIYQQECBmnYYnP4AgCYTSmz7pOP+wAAAABJRU5ErkJggg==" />
+  <link rel="stylesheet" href="./slider2.css" />
+    <title>Careers</title>
+  <link rel="stylesheet" type="text/css" href="./slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css" />
+  <link href="style.css" rel="stylesheet" />
+</head>
+<style media="screen">
+  .header__logo{
+    /* height: 80px; */
+    /* border:1px solid red; */
+    width: 25%;
+    position: relative;
+  }
+  .header{
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .header__logo img{
+    position: absolute;
+    top:0;left:0;
+  }
+  .full-logo{
+    /* width: 80%; */
+    height:100%;
+    /* object-fit: cover; */
+  }
+  .logo-initials{
+    height:100%;
+    /* opacity: 0; */
+  }
+  .border{
+    border:1px solid red;
+  }
+  .customer-logos .slide{
+      padding: 20px;
+  }
+  .customer-logos img{
+    height: 100%;
+
+    width: 100%;
+    object-fit: cover;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .header__logo{
+      height: 40px;
+    }
+    .header{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .header__wrapper{
+      height: 100%;width: 100%;
+    }
+    .header .header__wrapper {
+      display: flex;
+    }
+    .homepage__slider__button__dark{
+      margin:0 10px;
+    }
+    .aside p{
+      padding: 12px 0;
+    }
+    .hideme{
+      display: none;
+    }
+  }
+
+</style>
+<body class="vertical-lines">
+  <div class="loader" id="loader">
+    <div class="bg-container">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </div>
+  <div class="header navbar ">
+    <div class="header__wrapper wrapper header-hide">
+      <div class="header__logo" data-animation="fadeDown" data-instant="true">
+          <img  class="logo-initials" src="logo/aerozone-logoA.svg" alt="aerozone" >
+          <img class="full-logo" src="logo/aerozone-logo.svg" alt="aerozone" >
+      </div>
+
+      <div class="mobile-btn" data-trigger-target="mobile-menu">
+        <span></span>
+      </div>
+
+      <nav class="header__nav">
+        <div class="header__nav__list"></div>
+        <div class="header__nav__item">
+          <div class="header__nav__item__title">
+            <a href="index.html">Home</a>
+          </div>
+        </div>
+        <div class="header__nav__item">
+          <div class="header__nav__item__title">
+            <a href="about%20us.html">About Us</a>
+          </div>
+        </div>
+        <div class="header__nav__item header__nav__item_has-child">
+          <div class="header__nav__item__title">
+            <a href="sectors.html">Sectors</a></div>
+          <div class="header__nav__item__list">
+            <a class="header__nav__item__list-item header__nav__item__title" href="./sectors.html#agriculturesec">Agriculture Inspection</a><a class="header__nav__item__list-item header__nav__item__title" href="urban%20inspection.html">Urban Inspection</a><a
+              class="header__nav__item__list-item header__nav__item__title" href="sectors.html#roadsec">Road Inspection</a><a class="header__nav__item__list-item header__nav__item__title" href="./sectors.html#solarpv">Solar PV Inspection</a><a
+              class="header__nav__item__list-item header__nav__item__title" href="./sectors.html#windmillsec">Windmill Inspection</a><a class="header__nav__item__list-item header__nav__item__title" href="./sectors.html#transmissionsec">Transmission Inspection</a>
+          </div>
+        </div>
+        <div class="header__nav__item header__nav__item_has-child">
+          <div class="header__nav__item__title">Services</div>
+          <div class="header__nav__item__list">
+            <a class="header__nav__item__list-item header__nav__item__title" href="index.html">2D Mapping</a><a class="header__nav__item__list-item header__nav__item__title" href="index.html">3-D Point Cloud</a><a
+              class="header__nav__item__list-item header__nav__item__title" href="index.html">3D Video</a><a class="header__nav__item__list-item header__nav__item__title" href="index.html">Automated AI Inspection</a><a
+              class="header__nav__item__list-item header__nav__item__title" href="index.html">DSM/DTM/DEM</a><a class="header__nav__item__list-item header__nav__item__title" href="index.html">Thermal Video</a>
+            <a class="header__nav__item__list-item header__nav__item__title" href="index.html">Thermal Orthomosaic</a>
+            <a class="header__nav__item__list-item header__nav__item__title" href="index.html">Change Detection</a>
+            <a class="header__nav__item__list-item header__nav__item__title" href="index.html">Volumetric Calculation</a>
+          </div>
+        </div>
+        <div class="header__nav__item">
+          <div class="header__nav__item__title">
+            <a href="comingsoon.html">News</a>
+          </div>
+        </div>
+        <div class="header__nav__item">
+          <div class="header__nav__item__title">
+            <a href="careers.html">Careers</a>
+          </div>
+        </div>
+        <div class="header__nav__item">
+          <div class="header__nav__item__title">
+            <a href="comingsoon.html">Samples</a>
+          </div>
+        </div>
+      </nav>
+      <div class="header__button" data-animation="fadeDown" data-delay="1000" data-instant="true">
+        <a class="heaeder__button__link btn btn_color_grey" href="mailto:aerazon.ai@gmail.com">Get in touch</a>
+      </div>
+    </div>
+  </div>
+    <main>
+      <div class="section about__banner banner ">
+        <div class="section__bg">
+          <div id="home-banner">
+            <img src="images/careers.jpg" style="height:100%;width:100%;object-fit:cover">
+          </div>
+        </div>
+        <div class="aside">
+        </div>
+        <div class="section__wrapper container">
+          <div class="section__contnent">
+            <div class="banner__wrapper">
+              <div class="white-back">
+                <div class="banner__title" data-animation="fadeDown">Careers</div>
+                <div class="banner__descr" data-animation="fromOpacity">Learn about your future with us</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section grid-section pricing__pricings bgwhite ">
+        <div class="section__bg"></div>
+        <div class="aside">
+          <p></p>
+        </div>
+        <div class="section__wrapper container">
+          <div class="section__contnent">
+            <div class="grid-section__wrapper" id="news" style="display:block;padding:65px 0">
+              <section class="career-section">
+                <div class="container">
+                    <div class="row no-gutters">
+                        <div class="col-md-12">
+                            <div class="hiring">
+                                <h1>
+                                    We're hiring!
+                                </h1>
+                                <div class="about-body">
+                                    Aerazon is looking to fill few key roles. Someone who is proactive, quick learner and have a go-getter attitude.
+                                </div>
+                                <br><hr/><br>
+                                <h1>
+                                    About us
+                                    <!--<hr>-->
+                                </h1>
+                                <div class="about-body">
+                                    We are a fast-growing B2B product startup into visitors and premises security space.
+                                    &nbsp; Aerazon helps organizations to create wow experience at the entrance and increase the security of the premises.
+                                    &nbsp; We are backed by investors, a high potential team and over 100 enterprise customers.
+                                    &nbsp;  product-platform leverages AI and ML technologies to achieve a truly seamless experience.
+                                    &nbsp; Our founders come with over a decade of technology and entrepreneurial experience in India and abroad.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section grid-section pricing__pricings bgwhite ">
+        <div class="section__bg"></div>
+        <div class="aside">
+          <p>WHAT'S NEW<br> IN TECH<span data-animation="leftTitle"></span></p>
+        </div>
+        <div class="section__wrapper container">
+          <div class="section__contnent">
+            <div class="grid-section__wrapper" id="news" style="display:block;padding:65px 0">
+              <section class="career-section">
+                <div class="container">
+                  <div class="opening-title">
+                    Apply now to be a part of our growth journey!
+                  </div>
+                  <section id="openings">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="container tech-openings">
+                          <button class="collapsible"> Angular/Web full stack developer </button>
+                          <div class="content">
+                            <p>
+                              Angular/Web development experience <br>
+                              Have exposure to PHP, MySQL, API <br>
+                              Exposure to RxJS and Redux is a plus. <br>
+                              Experience: 2 to 3 years.<br>
+                              Education: BE/BTech Computers, MSc/MCA or similar <br>
+                              Location: Pune (Remote until lockdown) <br>
+                              Job Type: Full-time <br>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="container tech-openings">
+                          <button class="collapsible"> B2B Sales Specialist </button>
+                          <div class="content">
+                            <p>
+                              Job Description:<br>
+                              - Attending inbound customer inquiries. <br>
+                              - Identifying and developing new sales opportunities.<br>
+                              - Contacting potential customers on LinkedIn, via phone calls and emails. <br>
+                              - Conduct demo meeting and help customers choose right offering<br>
+                              - Handle objections, negotiation and win new customers. <br>
+                            </p>
+
+                            <p>
+                              Required:<br>
+                              - 2 to 4 years of B2B sales experience with minimum 6 months in selling software solutions.<br>
+                              - Ambitious, result-oriented and has great attention to detail.<br>
+                              - Strong convincing skills with active listening ability.<br>
+                              - Effective communication skills.<br>
+                            </p>
+
+                            <p>
+                              Good to have:<br>
+                              - Previous SaaS experience and/or B2B enterprise selling experience<br>
+                              - Has worked at mid size startup<br>
+                              - Experience dealing with International customers<br>
+                              - Education background of Technology + Management studies<br>
+                            </p>
+
+                            <p>
+                              Location: Pune (Remote until Sept-20)<br>
+                              Job Type: Full-time<br>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-12">
+                        <div class="container tech-openings">
+                          <button class="collapsible"> Customer Success Manager </button>
+                          <div class="content">
+                            <p>
+                              Job Description:<br>
+                              - Customer onboarding: help them setup product configuration and upload data<br>
+                              - Conduct product training for various roles in the customer organization. <br>
+                              - Technical/product Support: Address customer queries by phone, emails and helpdesk tickets <br>
+                              - Contact customers to explain new features and help them upgrade to new plan<br>
+                              - Collect feedback, testimonial, create case studies<br>
+                              - Work closely with product and sales team<br>
+                            </p>
+
+                            <p>
+                              Skill Required: <br>
+                              - 1 to 4 years years of experience in software solutions in customer-facing role<br>
+                              - Active listening skills and Effective communication<br>
+                              - Ambitious, result-oriented and has great attention to detail.<br>
+                            </p>
+
+                            <p>
+                              Good to have: <br>
+                              - Previous experience working with enterprise customers <br>
+                              - Has worked at mid size startup <br>
+                              - Experience dealing with International customers <br>
+                              - Education background of Technology + Management studies <br>
+                            </p>
+                          </div>
+
+                          <button class="collapsible_disabled" id="mybtn1"> Marketing Manager </button>
+                          <div class="content">
+                            <p>
+
+                            </p>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </section>
+
+                <div class="row">
+                <div class="col-md-12">
+                    <div class="mail">
+                        Mail us
+                        <!--<hr>-->
+                        <div class="mail-body">
+                            Send your resume at <b>aerazon.ai@gmail.com</b><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </main>
+
+    <div class="footer">
+    <div class="container_fullsize">
+      <div class="wrapper">
+        <div class="column links">
+          <div class="column__title">Quick Links</div>
+          <div class="column__list">
+            <div class="column__list__item">
+              <a href="about%20us.html">About Us</a>
+            </div>
+            <div class="column__list__item">
+              <a href="sectors.html">Sectors</a>
+            </div>
+            <div class="column__list__item">
+              <a href="comingsoon.html">Services</a>
+            </div>
+            <div class="column__list__item">
+              <a href="comingsoon.html">News</a>
+            </div>
+            <div class="column__list__item">
+              <a href="careers.html">Careers</a>
+            </div>
+            <div class="column__list__item">
+              <a href="comingsoon.html">Samples</a>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="column__title">Contact Us</div>
+          <div class="column__list">
+            <div class="column__list__item">
+              <a href="index.html">Aerazon</a>
+            </div>
+            <div class="column__list__item">
+              <a href="tel:+919413462836">Phone: +919413462836</a>
+            </div>
+            <div class="column__list__item">
+              <a href="mailto:aerazon.ai@gmail.com">Email: @aerazon.ai@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="column__title">Newsletter</div>
+          <div class="column__subscription">
+            <div class="column__subscription__title">
+              <p>If you would like to receive updates, sign up below</p>
+            </div>
+            <form class="column__subscription__input wrapper" id="footer-form">
+              <input type="email" placeholder="Email Address" />
+              <div class="column__subscription__button">
+                <div class="btn btn_color_grey">send</div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="column_fullwidth wrapper">
+          <div class="column__copyright">©Aerazon,All rights reserved.</div>
+          <div class="column__disclaimer wrapper">
+            <div class="column__disclaimer__item">
+              <a href="disclaimer.html">Disclaimer</a>
+            </div>
+            <div class="column__disclaimer__item">
+              <a href="refund.html">Refunds</a>
+            </div>
+            <div class="column__disclaimer__item">
+              <a href="privacy.html">Privacy Policy</a>
+            </div>
+          </div>
+          <div class="partners"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/app.js"></script>
+    <script>
+  window.contactbubbleSettings = {
+    app_id: "qzDJtFpTZhcFXvBSQ",
+}
+</script>
+<script type="text/javascript" src="https://app.contactbubble.com/embed.js" defer></script>
+</body>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+
+
+<style media="screen">
+  .slick-active+.slick-active~.slick-slide {
+    opacity: 1;
+  }
+</style>
+<script type="text/javascript">
+  $(document).on("ready", function() {
+    var is_mobile = false;
+    if (window.matchMedia("(max-width: 767px)").matches)
+       {// The viewport is less than 768 pixels wide
+         is_mobile = true;
+       } else {
+           // The viewport is at least 768 pixels wide
+           is_mobile = false;
+       }
+    // sliders
+    {
+      var slider1 = $('#homepage-slider1');
+      if (slider1.length) {
+        var prev = document.querySelector('.homepage__slider__button1--prev');
+        var next = document.querySelector('.homepage__slider__button1--next');
+        slider1.slick({
+          slidesToShow: 3,
+          autoplay: true,
+          infinite: false,
+          prevArrow: false,
+          nextArrow: false,
+          responsive: [{
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2
+            }
+          }, {
+            breakpoint: 481,
+            settings: {
+              slidesToShow: 1
+            }
+          }]
+        });
+
+        next.addEventListener('click', function() {
+          return slider1.slick('slickNext');
+        });
+        prev.addEventListener('click', function() {
+          return slider1.slick('slickPrev');
+        });
+      }
+      var slider2 = $('#homepage-slider2');
+      if (slider2.length) {
+        var prev = document.querySelector('.homepage__slider__button2--prev');
+        var next = document.querySelector('.homepage__slider__button2--next');
+        slider2.slick({
+          slidesToShow: 3,
+          autoplay: true,
+          infinite: false,
+          prevArrow: false,
+          nextArrow: false,
+          responsive: [{
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2
+            }
+          }, {
+            breakpoint: 481,
+            settings: {
+              slidesToShow: 1
+            }
+          }]
+        });
+
+        next.addEventListener('click', function() {
+          return slider2.slick('slickNext');
+        });
+        prev.addEventListener('click', function() {
+          return slider2.slick('slickPrev');
+        });
+      }
+
+      var slider3 = $('#homepage-slider');
+      if (slider3.length) {
+        var prev = document.querySelector('.homepage__slider__button3--prev');
+        var next = document.querySelector('.homepage__slider__button3--next');
+        slider3.slick({
+          slidesToShow: 3,
+          infinite: true,
+          draggable: false,
+          prevArrow: false,
+          nextArrow: false,
+          responsive: [{
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2
+            }
+          }, {
+            breakpoint: 481,
+            settings: {
+              slidesToShow: 1
+            }
+          }]
+        });
+
+        next.addEventListener('click', function() {
+          return slider3.slick('slickNext');
+        });
+        prev.addEventListener('click', function() {
+          return slider3.slick('slickPrev');
+        });
+      }
+    }
+    // sliders end
+    $('body').css('padding-top', $('.navbar').outerHeight() + 'px')
+    const checkpoint = 300;
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll <= checkpoint) {
+        opacity = 1 - currentScroll / checkpoint;
+        $('.header').css("padding-top","20px");
+        $('.header').css("padding-bottom","20px");
+        $(".header__logo .full-logo ").css("height","").css("opacity",opacity);
+        $("#hideinten").css("opacity",opacity + 0.5);
+        if(is_mobile === true){
+          $(".header").css("height","80px")
+        }
+      } else {
+        opacity = 0;
+        $('.header').css("padding-top","10px");
+        $('.header').css("padding-bottom","10px");
+        $(".header__logo .full-logo ").css("height","100%");
+        $("#hideinten").css("opacity","0");
+        $(".header__logo .full-logo ").css("opacity","0");
+        if(is_mobile === true){
+          $(".header").css("height","60px")
+        }
+      }
+
+      // $(".header-hide").css("opacity", opacity);
+    });
+    // if ($('.smart-scroll').length > 0) { // check if element exists
+    //   var last_scroll_top = 0;
+    //   $(window).on('scroll', function() {
+    //     scroll_top = $(this).scrollTop();
+    //     if (scroll_top < last_scroll_top) {
+    //       $(".header-hide").css("opacity", "1");
+    //       $('.hide-on-scroll').removeClass('scrolled-down').addClass('scrolled-up');
+    //     } else {
+    //       $('.hide-on-scroll').removeClass('scrolled-up').addClass('scrolled-down');
+    //     }
+    //     last_scroll_top = scroll_top;
+    //   });
+    // }
+
+  });
+  $(".mobile-btn").click(function(){
+    $(".header").toggleClass("active")
+  });
+  $('.customer-logos').slick({
+    slidesToShow: 3,
+    // centerMode: true,
+    autoplay:true,
+    centerPadding: '20px',
+    arrows: false,
+    slidesToScroll:1,
+    dots: false,
+    pauseOnHover: false,
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3
+      }
+    }, {
+      breakpoint: 520,
+      settings: {
+        slidesToShow: 2
+      }
+    }]
+  });
+  // $("#hideinten").delay(10000).fadeOut(300);
+</script>
+
+</html>
