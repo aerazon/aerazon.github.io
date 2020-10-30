@@ -81968,7 +81968,7 @@ function elastic(amplitude, period) {
   var a = minMax(amplitude, 1, 10);
   var p = minMax(period, .1, 2);
   return function (t) {
-    return (t === 0 || t === 1) ? t : 
+    return (t === 0 || t === 1) ? t :
       -a * Math.pow(2, 10 * (t - 1)) * Math.sin((((t - 1) - (p / (Math.PI * 2) * Math.asin(1 / a))) * (Math.PI * 2)) / p);
   }
 }
@@ -82106,7 +82106,7 @@ var penner = (function () {
     ]
   };
 
-  var eases = { 
+  var eases = {
     linear: [0.250, 0.250, 0.750, 0.750]
   };
 
@@ -82369,7 +82369,7 @@ function getRectLength(el) {
 
 function getLineLength(el) {
   return getDistance(
-    {x: getAttribute(el, 'x1'), y: getAttribute(el, 'y1')}, 
+    {x: getAttribute(el, 'x1'), y: getAttribute(el, 'y1')},
     {x: getAttribute(el, 'x2'), y: getAttribute(el, 'y2')}
   );
 }
@@ -82708,7 +82708,7 @@ var pausedInstances = [];
 var raf;
 
 var engine = (function () {
-  function play() { 
+  function play() {
     raf = requestAnimationFrame(step);
   }
   function step(t) {
@@ -92576,7 +92576,7 @@ document.addEventListener("DOMContentLoaded", function () {
   (0, _footer2.default)();
   (0, _drone__clientFeatures2.default)();
   (0, _trigger2.default)();
-  (0, _homepage__slider2.default)();
+  // (0, _homepage__slider2.default)();
   (0, _infravieu__features2.default)();
   (0, _applications2.default)();
   (0, _header2.default)();
@@ -92863,39 +92863,6 @@ var _slickCarousel = __webpack_require__(529);
 var _slickCarousel2 = _interopRequireDefault(_slickCarousel);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = function () {
-  var slider = (0, _jquery2.default)('#homepage-slider');
-
-  if (slider.length) {
-    var prev = document.querySelector('.homepage__slider__button--prev');
-    var next = document.querySelector('.homepage__slider__button--next');
-
-    slider.slick({
-      slidesToShow: 3,
-      infinite: true,
-      draggable: false,
-      responsive: [{
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2
-        }
-      }, {
-        breakpoint: 481,
-        settings: {
-          slidesToShow: 1
-        }
-      }]
-    });
-
-    next.addEventListener('click', function () {
-      return slider.slick('slickNext');
-    });
-    prev.addEventListener('click', function () {
-      return slider.slick('slickPrev');
-    });
-  }
-};
 
 /***/ }),
 /* 529 */
@@ -96204,7 +96171,7 @@ module.exports = TrackballControls = function ( object, domElement ) {
 	this.maxDistance = Infinity;
 
 	/**
-	 * `KeyboardEvent.keyCode` values which should trigger the different 
+	 * `KeyboardEvent.keyCode` values which should trigger the different
 	 * interaction states. Each element can be a single code or an array
 	 * of codes. All elements are required.
 	 */
@@ -96530,10 +96497,10 @@ module.exports = TrackballControls = function ( object, domElement ) {
 	/**
 	 * Checks if the pressed key is any of the configured modifier keys for
 	 * a specified behavior.
-	 * 
-	 * @param {number | number[]} keys 
-	 * @param {number} key 
-	 * 
+	 *
+	 * @param {number | number[]} keys
+	 * @param {number} key
+	 *
 	 * @returns {boolean} `true` if `keys` contains or equals `key`
 	 */
 	function containsKey(keys, key) {
@@ -103362,7 +103329,7 @@ module.exports = function toFastproperties(o) {
 	Sub.prototype = o;
 	var receiver = new Sub(); // create an instance
 	function ic() { return typeof receiver.foo; } // perform access
-	ic(); 
+	ic();
 	ic();
 	return o;
 	eval("o" + o); // ensure no dead code elimination

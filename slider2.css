@@ -1,28 +1,32 @@
 .card-container {
   width: 100%;
-  margin: 30px 20px 0;
-
+  /* margin: 30px 20px 0; */
+    padding: 5px 5px 5px 5px;
 }
-
+*{
+  transition: 0.3s all ease;
+}
 .card-container .card {
   font-weight: bold;
   position: relative;
-  width: 280px;
-  margin: 0 10px;
+  /* width: 100%; */
+  margin: 0 15px;
   border-radius: 12px;
-  height: calc(100vh - 100px);
+  height: calc(80vh);
+overflow: hidden;
 }
+
 @media only screen and (max-width: 600px) {
   .card-container .card {
-  height: calc(60vh);
-}
+    height: calc(40vh);
+  }
 }
 
 .flex {
   display: flex;
   flex-wrap: wrap;
 }
-
+/*
 .card-container .card a {
   width: 100%;
   height: inherit;
@@ -33,8 +37,9 @@
   color: black;
   display: block;
   transition: 0.4s ease;
-}
-#card_details{
+} */
+
+.card_details {
   padding: 30px;
   font-family: "Montserrat", sans-serif;
   -webkit-box-direction: normal;
@@ -43,10 +48,12 @@
   font-weight: bold;
   line-height: 30px;
   opacity: 1;
+  overflow: hidden;
+
 }
-#slider_box1,#slider_box2,#slider_box3,#slider_box4,#slider_box5,#slider_box6,
-#slider_box7,#slider_box8,#slider_box9,#slider_box10,#slider_box11,#slider_box12
-{
+
+.slider_box1, .slider_box2, .slider_box3, .slider_box4, .slider_box5, .slider_box6,
+.slider_box7, .slider_box8, .slider_box9, .slider_box10, .slider_box11, .slider_box12 {
   height: inherit;
   overflow: hidden;
   border: 0px;
@@ -57,95 +64,127 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.slider__text h3{
+
+.slider__text h3 {
   color: white;
 }
 
-#slider_box1{
+.slider_box1 {
   /* road inspection */
-  background-image:url("images/road.png");
-}
-#slider_box2{
-  background-image:url("images/landsurvey.png");
-}
-#slider_box3{
-  background-image:url("images/windmill.gif");
-}
-#slider_box4{
-  background-image:url("images/line Inspection.png");
-}
-#slider_box5{
-  background-image:url("images/telecom tower.webp");
-}
-#slider_box6{
-  background-image:url("images/railway-line.png");
-}
-#slider_box7{
-  background-image:url("images/pipeline.png");
-}
-#slider_box8{
-  background-image:url("images/agriculture.png");
-}
-#slider_box9{
-  background-image:url("images/survisa.jpg");
-}
-#slider_box10{
-  background-image:url("images/landsurvey.png");
-}
-#slider_box11{
-  background-image:url("images/power-plant.png");
-}
-#slider_box12{
-  background-image:url("images/urbanplanning.png");
+  background-image: url("images/road.png");
 }
 
-.slider__text{
+.slider_box2 {
+  background-image: url("images/landsurvey.png");
+}
+
+.slider_box3 {
+  background-image: url("images/windmill.jpg");
+}
+
+.slider_box4 {
+  background-image: url("images/line Inspection.png");
+}
+
+.slider_box5 {
+  background-image: url("images/telecom tower.webp");
+}
+
+.slider_box6 {
+  background-image: url("images/railway-line.png");
+}
+
+.slider_box7 {
+  background-image: url("images/pipeline.png");
+}
+
+.slider_box8 {
+  background-image: url("images/agriculture%20inspection.png");
+}
+
+.slider_box9 {
+  background-image: url("images/survisa.jpg");
+}
+
+.slider_box10 {
+  background-image: url("images/landsurvey.png");
+}
+
+.slider_box11 {
+  background-image: url("images/power-plant.png");
+}
+
+.slider_box12 {
+  background-image: url("images/urbanplanning.png");
+}
+
+.slider__text {
   padding: 30px;
 }
-#card_details p{
+
+.card_details p {
   font-family: "Montserrat", sans-serif;
-color: #313B4F;
--webkit-box-direction: normal;
-box-sizing: border-box;
-font-weight: 400;
-font-size: 16px;
-line-height: 26px;
-margin-top: 16px;
+  color: #313B4F;
+  -webkit-box-direction: normal;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  margin-top: 16px;
 }
-.card-container .card a:hover {
-  transform: translate(40px, -30px);
+.card{
+  position:relative;
+}
+.card--hover{
+  position: absolute;
+  top:0;
+  left:0;
+  overflow: hidden;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+65 */
+background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 65%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 65%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 65%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+
+height: inherit;
+  width: inherit;
+}
+.card-container .card:hover {
   border: 2px solid #5bc0eb;
 }
 
-.card-container .card a:hover .card--display {
-  display: none;
+.card-container .card:hover .card--display {
+  opacity: 0.4
 }
 
-.card-container .card a:hover .card--hover {
+.card-container .card:hover .card--display .slider__text{
+  opacity: 0
+}
+.card-container .card:hover .card--hover {
   display: block;
 }
 
-.card-container .card a .card--display i {
+.card-container .card .card--display i {
   font-size: 2em;
 }
 
-.card-container .card a .card--display h2 {
+.card-container .card  .card--display h2 {
   margin: 20px 0 0;
 }
 
-.card-container .card a .card--hover {
+.card-container .card  .card--hover {
   display: none;
 }
 
-.card-container .card a .card--hover h2 {
+.card-container .card  .card--hover h2 {
   margin: 20px 0;
 }
 
-.card-container .card a .card--hover p {
+.card-container .card  .card--hover p {
   font-weight: normal;
 }
 
-.card-container .card a .card--hover p.link {
+.card-container .card  .card--hover p.link {
   margin: 20px 0 0;
   font-weight: bold;
   color: #5bc0eb;
@@ -166,7 +205,7 @@ margin-top: 16px;
   height: 100%;
   left: 0;
   top: 0;
-  border: 1px dashed rgba(0,0,0,0.7);
+  /* border: 1px dashed rgba(0, 0, 0, 0.7); */
   z-index: -1;
 }
 
@@ -182,9 +221,11 @@ margin-top: 16px;
 
 .slider {
   width: 100%;
-  padding: 40px;
-  /* margin: 20px auto; */
-}ick-slide {
+  /* padding: 40px; */
+  margin: 20px auto;
+}
+
+.sick-slide {
   margin: 0px 20px;
 }
 
@@ -199,11 +240,11 @@ margin-top: 16px;
 
 .slick-slide {
   transition: all ease-in-out .3s;
-  opacity: .2;
+  opacity: 1;
 }
 
 .slick-active {
-  opacity: .5;
+  opacity: 1;
 }
 
 .slick-current {
@@ -254,7 +295,6 @@ margin-top: 16px;
   -ms-flex-direction: column;
   flex-direction: column;
   border-radius: 3px;
-
   -webkit-transition: -webkit-box-shadow ease 1s;
   transition: -webkit-box-shadow ease 1s;
   transition: box-shadow ease 1s;
